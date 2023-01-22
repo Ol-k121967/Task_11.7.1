@@ -5,9 +5,40 @@
     <title>Задание 1. Таблица истинности PHP </title>
     <link rel="stylesheet" href="./CSS/style.css" type="text/css"/>
 </head>
-<body>
+<br>
 	 <h2>Задание 1. Таблица истинности РНР</h2>
-	 <p>&nbsp;</p>
+	 <br> 
+     <br> 
+
+<?php 
+      $a = 0;
+      $b = 0;
+      $a1 = !$a;
+      $b1 = $a || $b;
+      $c1 = $a & $b;
+      $d1 = $a xor $b;
+      
+      $a = 0;
+      $b = 1;
+      $a2 = !$a;
+      $b2 = $a || $b;
+      $c2 = $a & $b;
+      $d2 = $a xor $b;
+
+      $a = 1;
+      $b = 0;
+      $a3 = !$a;
+      $b3 = $a || $b;
+      $c3 = $a & $b;
+      $d3 = $a xor $b;
+
+      $a = 1;
+      $b = 1;
+      $a4 = !$a;
+      $b4 = $a || $b;
+      $c4 = $a & $b;
+      $d4 = $a xor $b;
+?>
 	 <table width="90%" border="3" align="center">
 	   <tbody>
 	     <tr>
@@ -15,154 +46,152 @@
 	       <th width="16%" height="48" scope="col">B</th>
 	       <th width="16%" height="48" scope="col">!A</th>
 	       <th width="16%" height="48" scope="col">A || B</th>
-	       <th width="16%" height="48" scope="col">A &amp;&amp; B</th>
+	       <th width="16%" height="48" scope="col">A &amp; B</th>
 	       <th width="16%" height="48" scope="col">A xor B</th>
          </tr>
 	     <tr>
 	       <th height="48" scope="row">0</th>
 	       <td>0</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
+	       <td><?= print_r (($converted_res = $a1 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $b1 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $c1 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $d1 ? 'true' : 'false'),true) ?></td>
          </tr>
 	     <tr>
 	       <th height="48" scope="row">0</th>
 	       <td>1</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
+	       <td><?= print_r (($converted_res = $a2 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $b2 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $c2 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $d2 ? 'true' : 'false'),true) ?></td>
          </tr>
 	     <tr>
 	       <th height="48" scope="row">1</th>
 	       <td>0</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
+	       <td><?= print_r (($converted_res = $a3 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $b3 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $c3 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $d3 ? 'true' : 'false'),true) ?></td>
          </tr>
 	     <tr>
 	       <th height="48" scope="row">1</th>
 	       <td>1</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
-	       <td>&nbsp;</td>
+	       <td><?= print_r (($converted_res = $a4 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $b4 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $c4 ? 'true' : 'false'),true) ?></td>
+	       <td><?= print_r (($converted_res = $d4 ? 'true' : 'false'),true) ?></td>
          </tr>
        </tbody>
 </table>
-   
-
+<br> 
+<br> 
 <h2>Задание 1. Таблица истинности РНР</h2>
-<p>&nbsp;
-</p>
-<table width="95%" border="3">
+<br> 
+<br> 
+<table width="90%" border="3" align="center">
   <tbody>
     <tr>
-      <th scope="col">&nbsp;</th>
-      <th scope="col">true</th>
-      <th scope="col">false</th>
-      <th scope="col">1</th>
-      <th scope="col">0</th>
-      <th scope="col">-1</th>
-      <th scope="col">&quot;1&quot;</th>
-      <th scope="col">null</th>
-      <th scope="col">&quot;php&quot;</th>
+      <th width="10%" height="48" scope="col"><?= 'напечатать эту строку' ?></th>
+      <th width="10%" height="48" scope="col">true</th>
+      <th width="10%" height="48" scope="col">false</th>
+      <th width="10%" height="48" scope="col">1</th>
+      <th width="10%" height="48" scope="col">0</th>
+      <th width="10%" height="48" scope="col">-1</th>
+      <th width="10%" height="48" scope="col">&quot;1&quot;</th>
+      <th width="10%" height="48" scope="col">null</th>
+      <th width="10%" height="48" scope="col">&quot;php&quot;</th>
     </tr>
     <tr>
-      <th scope="row">true</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th height="48" scope="row">true</th>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
     </tr>
     <tr>
-      <th scope="row">false</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th height="48" scope="row">false</th>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
     </tr>
     <tr>
-      <th scope="row">1</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th height="48" scope="row">1</th>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
     </tr>
     <tr>
-      <th scope="row">0</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th height="48" scope="row">0</th>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
     </tr>
     <tr>
-      <th scope="row">-1</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th height="48" scope="row">-1</th>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
     </tr>
     <tr>
-      <th scope="row">&quot;1&quot;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th height="48" scope="row">&quot;1&quot;</th>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
     </tr>
     <tr>
-      <th scope="row">null</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th height="48" scope="row">null</th>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
     </tr>
     <tr>
-      <th scope="row">&quot;php&quot;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th height="48" scope="row">&quot;php&quot;</th>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
+      <td><?= 'напечатать эту строку' ?></td>
     </tr>
   </tbody>
 </table>
 
 <script src="./JS/init.js"></script>
-
-</body>
 </html>
 
